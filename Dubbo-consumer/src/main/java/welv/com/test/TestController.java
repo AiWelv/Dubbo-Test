@@ -3,6 +3,7 @@ package welv.com.test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import welv.com.provider.TestOneService;
 
@@ -28,9 +29,9 @@ public class TestController {
 
     @RequestMapping("/test1")
     @ResponseBody
-    public RefundRet test1(){
+    public RefundRet test1(@RequestParam("acctId") String acctId){
         RefundRet ret  = new RefundRet();
-        ret.setREFUNDSTATE(testOneService.sayHello("111"));
+        ret.setREFUNDSTATE(testOneService.sayHello(acctId));
         ret.setFAILMSG(testOneService.getUsers().get(0).toString());
         return ret;
     }
