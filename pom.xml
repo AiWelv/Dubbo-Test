@@ -12,6 +12,7 @@
         <module>Dubbo-api</module>
         <module>Dubbo-consumer</module>
         <module>Dubbo-provider</module>
+        <module>Dubbo-provider-A</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,11 +22,7 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>welv.com</groupId>
-            <artifactId>Dubbo-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>

@@ -20,7 +20,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Dubbo-provider</artifactId>
+    <artifactId>Dubbo-provider-A</artifactId>
 
     <dependencies>
         <dependency>
