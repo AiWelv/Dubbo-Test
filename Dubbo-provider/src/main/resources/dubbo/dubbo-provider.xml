@@ -16,9 +16,9 @@
     <!-- 暴露服务 -->
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}"/>
     <dubbo:monitor protocol="registry"/>
-    <dubbo:service interface="welv.com.provider.TestOneService"
-                   ref="testOneServiceImpl" retries="0" timeout="6000" loadbalance="random"/>
+    <dubbo:service interface="welv.com.provider.TestOneService" group="AAAAA"
+                   ref="testOneServiceImpl" retries="0" timeout="6000" loadbalance="random" version="1.0"/>
 
     <dubbo:service interface="welv.com.provider.TestTwoService"
-                   ref="testTwoServiceImpl" retries="0" timeout="6000" loadbalance="random"/>
+                   ref="testTwoServiceImpl" retries="0" timeout="6000" loadbalance="random" weight=""/>
 </beans>

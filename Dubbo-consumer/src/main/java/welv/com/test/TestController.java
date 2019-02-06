@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import welv.com.provider.RefundRet;
 import welv.com.provider.TestOneService;
 
 /**
@@ -34,6 +35,12 @@ public class TestController {
         ret.setREFUNDSTATE(testOneService.sayHello(acctId));
         ret.setFAILMSG(testOneService.getUsers().get(0).toString());
         return ret;
+    }
+
+    @RequestMapping("/test2")
+    @ResponseBody
+    public RefundRet test2(@RequestParam("msg") String msg){
+        return testOneService.getRef(msg);
     }
 
 }

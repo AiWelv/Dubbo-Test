@@ -11,4 +11,6 @@ public interface TestOneService {
 
     public List getUsers();
 
+    public RefundRet getRef(String msg);
+
 }

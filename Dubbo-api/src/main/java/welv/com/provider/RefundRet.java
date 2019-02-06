@@ -1,9 +1,11 @@
-package welv.com.test;
+package welv.com.provider;
+
+import java.io.Serializable;
 
 /**
  * Created by lvyj on 2017/12/26.
  */
-public class RefundRet {
+public class RefundRet implements Serializable{
 
     private String MERCHANTID;
     private String       ORDNUM;
