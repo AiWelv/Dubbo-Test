@@ -18,7 +18,8 @@
     <dubbo:monitor protocol="registry"/>
     <dubbo:service interface="welv.com.provider.TestOneService" group="AAAAA"
                    ref="testOneServiceImpl" retries="0" timeout="6000" loadbalance="random" version="1.0"/>
-
+    <dubbo:service interface="welv.com.provider.TestOneService" group="CCCCC"
+                   ref="testOneServiceAImpl" retries="0" timeout="6000" loadbalance="random" version="1.0"/>
     <dubbo:service interface="welv.com.provider.TestTwoService"
                    ref="testTwoServiceImpl" retries="0" timeout="6000" loadbalance="random" weight=""/>
 </beans>
